@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Engineering</title>
+</head>
+<body>
+<h2>Translator</h2>
+<form method = "POST" action = "">
+    To translate your voice, press record, wait a second, then
+    start speaking.
+    <br>
+    To finish recording your voice simply be quiet
+    <br>
+    {{ form.csrf_token }}
+    {{ form.record }}
+</form>
+<br>
+Transcript:
+<p>{{ text }}</p>
+Confidence:
+<p>{{ confidence }}</p>
+<br>
+<br>
+<br>
+</body>
+<p><a href="{{  url_for('home') }}" class="btn btn-primary btn-lg">Home</a></p>
+<p><a href="{{  url_for('team') }}" class="btn btn-primary btn-lg">Team Members</a></p>
+</html>
