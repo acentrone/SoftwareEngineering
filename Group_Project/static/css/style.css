@@ -1,0 +1,118 @@
+header {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  opacity: 1;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.logo {
+    padding-top: 30px;
+    margin-right: 600px;
+    margin-left: auto;
+    align: center;
+}
+
+body {
+  font-family: 'montserrat';
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'montserrat';
+  font-weight: 100;
+  font-size: 42px;
+  color: black;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'montserrat';
+  font-weight: 100;
+  font-size: 36px;
+  color: black;
+  text-align: center;
+}
+
+p {
+    font-family: 'montserrat';
+    font-weight: 100;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 0px;
+}
+
+select {
+  font-family: 'montserrat';
+  font-weight: 200;
+  font-size: 16px;
+  width: 30%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+.menu {
+  float: left;
+  display: inline;
+  margin-top: 10px;
+}
+.menu li {
+  display: inline;
+}
+.menu li + li + li {
+  margin-left: 35px;
+}
+
+.site-footer
+{
+  background-color: silver;
+  padding-top: 150px;
+  padding: 45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color: #fff;
+  font-family: 'montserrat'
+  font-size:40px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color: #00000;
+}
+
+.copyright-text
+{
+  margin:0
+    text-align: center;
+}
+
+p
+{
+  color:#fff;
+  font-family: 'montserrat'
+  font-size:18px;
+  text-align: center;
+  margin-top:5px;
+  letter-spacing:2px
+}

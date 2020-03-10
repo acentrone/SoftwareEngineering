@@ -1,0 +1,44 @@
+<!--- Code added by Anthony Centrone 3/9/20. The purpose is to add a general layout for all html pages to follow. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DICO</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img class="logo" src="{{url_for('static', filename='dico-logo.png')}}" align="center" style="width:175px;/>
+        <ul>
+            <a href="{{ url_for('home') }}">Home     </a>
+            <a href="{{ url_for('translate') }}">Translator     </a>
+            <a href="{{ url_for('team') }}">Team</a>
+        </ul>
+      </div>
+    </header>
+     <div class="container">
+        {% block content %}
+        {% endblock %}
+     </div>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div>
+            <p class="text">DICO <i>TO SAY, TELL, OR SPEAK</i> <br>DICO is an online tool created to help people translate
+                their own voice, video, or audio file quickly & accurately.<br>This project was developed for Software Engineering I
+                at Florida State University.</p>
+          </div>
+      <div class="container">
+        <div class="row">
+          <div>
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
