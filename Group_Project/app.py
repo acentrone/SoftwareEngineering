@@ -5,6 +5,7 @@ import os, json
 from google.cloud import translate_v2 as translator
 
 app = Flask(__name__)
+app.config["CACHE_TYPE"] = "null"
 
 #wtf forms requires a "secret key" for security purposes so i set it to
 #a random string of 32 hex digits
