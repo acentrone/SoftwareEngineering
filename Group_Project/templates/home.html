@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <title>Software Engineering</title>
 </head>
-<body>
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="about">
 <h2>CEN 4020 Software Engineering Group Project</h2>
 <br>
 <br>
 <br>
-<p><a href="{{  url_for('team') }}" class="btn btn-primary btn-lg">Team Members</a></p>
-<p><a href="{{  url_for('translate') }}" class="btn btn-primary btn-lg">Translator</a></p>
-</body>
+
+
 </html>
+
+</div>
+{% endblock %}

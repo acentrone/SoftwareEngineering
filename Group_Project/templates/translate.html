@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <title>Software Engineering</title>
 </head>
-<body>
+
+<!-- HTML Layout for all pages -->
+{% extends "layout.html" %}
+{% block content %}
+<div>
 <h2>Translator</h2>
+
+
 <form method = "POST" action = "">
+    <!-- Updated 3/9/2020 Anthony Centrone: Dropdown Menu added for user to choose target language -->
+    Choose the language you want to translate to:
+    <br>
+    <br>
+    <br>
+    {{ form.thelang }}
+    <br><br>
+    <br>
+    <br>
     To translate your voice, press record, wait a second, then
     start speaking.
     <br>
     To finish recording your voice simply be quiet
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
     {{ form.csrf_token }}
     {{ form.record }}
 </form>
+
+<br>
 <br>
 Transcript:
 <p>{{ oldtext }}</p>
@@ -25,7 +46,5 @@ Confidence:
 <br>
 <br>
 <br>
-</body>
-<p><a href="{{  url_for('home') }}" class="btn btn-primary btn-lg">Home</a></p>
-<p><a href="{{  url_for('team') }}" class="btn btn-primary btn-lg">Team Members</a></p>
-</html>
+</div>
+{% endblock %}

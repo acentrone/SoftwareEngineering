@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, redirect, request
 from speech2text import speech2text
 from wtf import RecordButton
-import os
+import os, json
 from google.cloud import translate_v2 as translator
 
 app = Flask(__name__)
@@ -24,13 +24,20 @@ def home():
     return render_template('home.html')
 
 
+
 #have to have the methods post and get here since we are asking for
 #input from the user
 @app.route('/translate', methods=['POST', 'GET'])
 def translate():
+
     #setting form to the RecordButton wt form that we created in wtf.py
     form = RecordButton()
+
     text = ""
+
+    #target language is french until the drop down menu changes it
+    target = 'fr'
+
 
     #this says if the wt form is valid when the submit button is pressed.
     #there is nothing that can make our form invalid and our submit button
@@ -44,13 +51,16 @@ def translate():
 
         #translation begins
         translate_client = translator.Client()
-        target = 'ja'   # translation to japanese
-        result = translate_client.translate(text, target_language=target)
+
+        target = form.thelang.data  # translation to user selected language
+
+        result = translate_client.translate(text, target_language=target )
 
         #passing the wt form and the text variable to the html so that it can be displayed
         return render_template('translate.html', form=form, oldtext=text, confidence=confidence,
                                newtext=result['translatedText'])
     return render_template('translate.html', form=form, text=text)
+
 
 
 @app.route("/team")
