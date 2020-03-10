@@ -27,7 +27,7 @@ h1 {
   font-family: 'montserrat';
   font-weight: 100;
   font-size: 42px;
-  color: black;
+  font-color: black;
   text-align: center;
 }
 
@@ -41,8 +41,8 @@ h2 {
 
 p {
     font-family: 'montserrat';
-    font-color: black;
-    font-weight: 100;
+    font-color: #00000;
+    font-weight: 200;
     font-size: 16px;
     text-align: center;
     margin-left: 0px;
@@ -107,14 +107,4 @@ select {
 {
   margin:0
     text-align: center;
-}
-
-p
-{
-  color:#fff;
-  font-family: 'montserrat'
-  font-size:18px;
-  text-align: center;
-  margin-top:5px;
-  letter-spacing:2px
 }
